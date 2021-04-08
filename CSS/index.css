@@ -46,8 +46,10 @@ button {
     font-size: 16px;
     margin: 20px;
     padding: 20px 50px;
-    border-radius: 20px;
-    border: 1px solid #ec4646;
+    border-radius: 5px;
+    color: white;
+    background: #ec4646;
+    border: 3px solid #ec8181;
 }
 
 .buttons button:active{

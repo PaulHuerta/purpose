@@ -25,14 +25,28 @@ if (sex == "h") {
 }
 
 function changeSi() {
-  no.innerHTML = "NO";
+  no.innerHTML = "No";
   si.innerHTML = "SI";
 }
 
 function changeNo() {
   no.innerHTML = "SI";
-  si.innerHTML = "NO";
+  si.innerHTML = "No";
 }
 
+function clickButton() {
+  Swal.fire({
+    title: "Gracias x aceptar!",
+    text: "Te hare muy feliz ♥",
+    imageUrl: "../IMG/gif.gif",
+    imageWidth: 370,
+    imageHeight: 300,
+    imageAlt: "Gatitos dandose un besito",
+    confirmButtonText: 'Entendido ♥',
+  });
+}
+
+si.addEventListener("click", clickButton);
+no.addEventListener("click", clickButton);
 var siHover = si.addEventListener("mouseover", changeSi);
 var noHover = no.addEventListener("mouseover", changeNo);
