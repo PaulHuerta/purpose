@@ -38,7 +38,7 @@ function clickButton() {
   Swal.fire({
     title: "Gracias x aceptar!",
     text: "Te hare muy feliz ♥",
-    imageUrl: "../IMG/gif.gif",
+    imageUrl: "https://github.com/PaulHuerta/LOL/blob/master/IMG/gif.gif?raw=true",
     imageWidth: 370,
     imageHeight: 300,
     imageAlt: "Gatitos dandose un besito",
