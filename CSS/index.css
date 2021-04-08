@@ -18,8 +18,8 @@ button {
 
 .app {
     background: white;
-    width: 75%;
-    height: 75%;
+    width: 75vw;
+    height: 75vh;
     display: grid;
     grid-auto-columns: auto;
     grid-template-rows: 50% 50%;
@@ -33,7 +33,7 @@ button {
     justify-content: center;
     text-align: center;
     font-family: 'Londrina Solid', cursive;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .buttons {
@@ -56,8 +56,35 @@ button {
     transform: scale(1.1);
 }
 
-
 footer{
     position: absolute;
     bottom: 0;
+}
+
+@media screen and (max-width: 430px){
+    .app {
+        width: 95vw;
+        height: 85vh;
+        border: 2px solid #ec4646;
+        border-radius: 20px;
+    }
+
+    footer{
+        width: 95vw;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 330px){
+    .app {
+        width: 100vw;
+        height: 85vh;
+        border: 1px solid #ec4646;
+        border-radius: 20px;
+    }
+
+    footer{
+        width: 95vw;
+        font-size: 12px;
+    }
 }
