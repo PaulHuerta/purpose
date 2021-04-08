@@ -17,26 +17,22 @@ var si = document.getElementById("si");
 setName.innerHTML = names;
 
 if (sex == "h") {
-    setSex.innerHTML = "novio";
-} else if(sex == "m"){
-    setSex.innerHTML = "novia";
+  setSex.innerHTML = "novio";
+} else if (sex == "m") {
+  setSex.innerHTML = "novia";
 } else {
-    setSex.innerHTML = "novi@";
+  setSex.innerHTML = "novi@";
 }
 
-function changeSi(){
-  no.innerHTML = "Si";
-  si.innerHTML = "No";
+function changeSi() {
+  no.innerHTML = "NO";
+  si.innerHTML = "SI";
 }
 
-function changeNo(){
-  no.innerHTML = "No";
-  si.innerHTML = "Si";
+function changeNo() {
+  no.innerHTML = "SI";
+  si.innerHTML = "NO";
 }
 
 var siHover = si.addEventListener("mouseover", changeSi);
 var noHover = no.addEventListener("mouseover", changeNo);
-
-
-
-

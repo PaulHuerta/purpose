@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    border: 1px solid black;
 }
 
 html, body {
@@ -18,11 +17,14 @@ button {
 }
 
 .app {
+    background: white;
     width: 75%;
     height: 75%;
     display: grid;
     grid-auto-columns: auto;
     grid-template-rows: 50% 50%;
+    border: 2px solid #ec4646;
+    border-radius: 20px;
 }
 
 .question {
@@ -44,4 +46,16 @@ button {
     font-size: 16px;
     margin: 20px;
     padding: 20px 50px;
+    border-radius: 20px;
+    border: 1px solid #ec4646;
+}
+
+.buttons button:active{
+    transform: scale(1.1);
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
 }
