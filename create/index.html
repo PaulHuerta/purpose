@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Purpose</title>
-    <link rel="stylesheet" href="CSS/index.css" />
+    <title>Generar enlace</title>
+    <link
+      rel="shortcut icon"
+      href="https://github.com/PaulHuerta/LOL/blob/master/IMG/pareja.png?raw=true"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link
@@ -25,7 +26,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <meta property="og:title" content="Te quiero pedir algo.." />
+    <meta property="og:title" content="Pidele a tu crush que sea tu novia y evita el rechazo xDD" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="www.github.io/LOL/" />
     <meta
@@ -35,16 +36,22 @@
   </head>
   <body>
     <div class="app">
-      <div class="question">
+      <div class="form">
+        <label for="name">Ingresa el nombre</label>
+        <input id="name" name="names" type="text" required />
         <div>
-          <p>
-            ¿<span id="names"></span>, quieres ser mi <span id="sex"></span>?
-          </p>
+          <label for="sex_h">Hombre</label>
+          <input id="sex_h" name="sex" value="h" type="radio" required />
         </div>
+        <div>
+          <label for="sex_m">Mujer</label>
+          <input id="sex_m" name="sex" value="m" type="radio" required />
+        </div>
+        <button id="button_click">Obtener</button>
       </div>
       <div class="buttons">
-        <button id="no">No</button>
-        <button id="si">Si</button>
+        <input id="link" type="url" />
+        <button id="copy_text">Copiar</button>
       </div>
     </div>
     <footer>
@@ -57,8 +64,8 @@
           ><i class="fab fa-github"></i
         ></a>
         | &copy; All rights reserved. </small
-      ><a href="create/" title="Generar"><i class="fas fa-share-square"></i></a>
+      >
     </footer>
-    <script src="JS/index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
