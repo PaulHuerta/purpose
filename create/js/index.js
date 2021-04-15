@@ -15,7 +15,7 @@ button.addEventListener("click", function () {
     var sex = "";
   }
 
-  inputLink.value = "paulhuerta.github.io/purpose/?sex=" + sex + "&name=" + names;
+  inputLink.value = "https://paulhuerta.github.io/purpose/?sex=" + sex + "&name=" + names;
 });
 
 buttonCopy.addEventListener("click", function(){
