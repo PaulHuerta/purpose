@@ -29,5 +29,5 @@ fetch('https://api-ssl.bitly.com/v4/shorten', {
         'Authorization': '{o_6bohnrl32l}',
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ "long_url": "https://dev.bitly.com", "domain": "bit.ly", "group_guid": "Ba1bc23dE4F" })
+    body: JSON.stringify({ "long_url": window.location.href , "domain": "pauhuerta.dev"})
 });
