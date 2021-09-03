@@ -22,3 +22,12 @@ buttonCopy.addEventListener("click", function(){
   inputLink.select();
   document.execCommand("copy");
 })  
+
+fetch('https://api-ssl.bitly.com/v4/shorten', {
+    method: 'POST',
+    headers: {
+        'Authorization': 'Bearer {o_6bohnrl32l}',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ "long_url": "https://dev.bitly.com", "domain": "bit.ly", "group_guid": "Ba1bc23dE4F" })
+});
