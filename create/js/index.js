@@ -27,7 +27,7 @@ button.addEventListener("click", function () {
     "&text=" +
     texta;
 
-  fetch("https://api.tinyurl.com/create", {
+  let response = fetch("https://api.tinyurl.com/create", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -35,6 +35,16 @@ button.addEventListener("click", function () {
         "Bearer HKgZSYSWogCS2s9hu5szKgQoaWQSj1faNIpr4hUcYBoFyGUg6IWUSv8tHW6J",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ "url": linkNOTshort, "domain": "tiny.one"})
+    body: JSON.stringify({ url: linkNOTshort, domain: "tiny.one" }),
   });
+
+  if (response.ok) {
+    // si el HTTP-status es 200-299
+    // obtener cuerpo de la respuesta (método debajo)
+    var result = response.json();
+  } else {
+    alert("Error-HTTP: " + response.status);
+  }
+
+  inputLink.value = result;
 });
