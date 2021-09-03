@@ -6,28 +6,35 @@ button.addEventListener("click", function () {
   var names = document.getElementById("name").value;
   var sex_h = document.getElementById("sex_h").checked;
   var sex_m = document.getElementById("sex_m").checked;
+  var sex_o = document.getElementById("sex_o").checked;
+  var texta = document.getElementById("text_a").value;
 
   if (sex_h == true) {
     var sex = "h";
   } else if (sex_m == true) {
     var sex = "m";
+  } else if (sex_m == true) {
+    var sex = "o";
   } else {
     var sex = "";
   }
 
-  inputLink.value = "https://paulhuerta.github.io/purpose/?sex=" + sex + "&name=" + names;
-});
+  linkNOTshort =
+    "https://paulhuerta.dev/proyects/YouWantToBeMy/?sex=" +
+    sex +
+    "&name=" +
+    names +
+    "&text=" +
+    texta;
 
-buttonCopy.addEventListener("click", function(){
-  inputLink.select();
-  document.execCommand("copy");
-})  
-
-fetch('https://api-ssl.bitly.com/v4/shorten', {
-    method: 'POST',
+  fetch("https://api.tinyurl.com/create", {
+    method: "POST",
     headers: {
-        'Authorization': 'Bearer {o_6bohnrl32l}',
-        'Content-Type': 'application/json'
+      Accept: "application/json",
+      Authorization:
+        "Bearer HKgZSYSWogCS2s9hu5szKgQoaWQSj1faNIpr4hUcYBoFyGUg6IWUSv8tHW6J",
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ "long_url": window.location.href , "domain": "pauhuerta.dev"})
+    body: JSON.stringify({ "url": linkNOTshort, "domain": "tiny.one"})
+  });
 });

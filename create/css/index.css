@@ -10,24 +10,15 @@ html, body {
     justify-content: center;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden
 }
 
 button {
     outline: none;
+    width: 100px;
 }
 
-.app {
-    background: white;
-    width: 75vw;
-    height: 75vh;
-    display: grid;
-    grid-auto-columns: auto;
-    grid-template-rows: 50% 50%;
-    border: 2px solid #ec4646;
-    border-radius: 20px;
-}
-
-.form {
+.form, .form div:nth-child(2n + 1) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +31,9 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: min-content;
 }
+
 button {
     font-size: 16px;
     margin: 20px;
@@ -49,41 +42,103 @@ button {
     color: white;
     background: #ec4646;
     border: 3px solid #ec8181;
+    cursor: pointer
 }
 
-.buttons button:active{
+label {
+    font-size: 20px;
+}
+
+.app {
+    position: relative;
+}
+
+svg, path {
+    position: absolute;
+    max-width: 500px;
+}
+
+.svg1 {
+    left: -650px;
+    bottom: -300px;
+}
+
+.svg2 {
+    left: -750px;
+    top: -200px;
+}
+
+.svg3 {
+    right: -650px;
+    bottom: -200px;
+}
+
+.svg4 {
+    right: -750px;
+    top: -200px;
+}
+
+.svg5 {
+    top: -360px;
+}
+
+input, textarea {
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #ec8181;
+    outline: none;
+}
+
+input[type="text"], textarea {
+    width: 350px;
+}
+
+.t-10 {
+    margin: 20px;
+}
+
+textarea {
+    resize: none;
+}
+
+.buttons button:active {
     transform: scale(1.1);
 }
 
-footer{
+footer {
     position: absolute;
     bottom: 0;
 }
 
-@media screen and (max-width: 430px){
+@media screen and (max-width: 430px) {
     .app {
         width: 95vw;
         height: 85vh;
         border: 2px solid #ec4646;
         border-radius: 20px;
     }
-
-    footer{
+    footer {
         width: 95vw;
         font-size: 12px;
     }
 }
 
-@media screen and (max-width: 330px){
+@media screen and (max-width: 330px) {
     .app {
         width: 100vw;
         height: 85vh;
         border: 1px solid #ec4646;
         border-radius: 20px;
     }
-
-    footer{
+    footer {
         width: 95vw;
         font-size: 12px;
     }
+}
+
+.support {
+    text-align: center;
+    padding: 20px
 }
