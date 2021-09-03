@@ -13,7 +13,7 @@ button.addEventListener("click", function () {
     var sex = "h";
   } else if (sex_m == true) {
     var sex = "m";
-  } else if (sex_m == true) {
+  } else if (sex_o == true) {
     var sex = "o";
   } else {
     var sex = "";
@@ -27,7 +27,7 @@ button.addEventListener("click", function () {
     "&text=" +
     texta;
 
-  let response = fetch("https://api.tinyurl.com/create", {
+  var result = fetch("https://api.tinyurl.com/create", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -38,13 +38,5 @@ button.addEventListener("click", function () {
     body: JSON.stringify({ url: linkNOTshort, domain: "tiny.one" }),
   });
 
-  if (response.ok) {
-    // si el HTTP-status es 200-299
-    // obtener cuerpo de la respuesta (método debajo)
-    var result = response.json();
-  } else {
-    alert("Error-HTTP: " + response.status);
-  }
-
-  inputLink.value = result;
+  console.log(result)
 });
